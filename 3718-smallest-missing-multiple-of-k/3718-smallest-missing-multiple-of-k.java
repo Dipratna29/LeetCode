@@ -1,14 +1,16 @@
 class Solution {
     public int missingMultiple(int[] nums, int k) {
-        boolean[] s = new boolean[101];
-        for (int x : nums) {
-            s[x] = true;
-        }
-        for (int i = 1;; ++i) {
-            int x = k * i;
-            if (x >= s.length || !s[x]) {
-                return x;
+        HashSet<Integer> set=new HashSet<>();
+        Arrays.sort(nums);
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]%k==0){
+                set.add(nums[i]);
             }
         }
+        int n=k;
+        while(set.contains(n)){
+            n+=k;
+        }
+        return n;
     }
 }
