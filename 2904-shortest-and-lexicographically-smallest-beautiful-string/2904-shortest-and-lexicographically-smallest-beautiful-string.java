@@ -1,30 +1,24 @@
 class Solution {
-  // Same as 76. Minimum Window Substring
-  public String shortestBeautifulSubstring(String s, int k) {
-    int bestLeft = -1;
-    int minLength = s.length() + 1;
-    int ones = 0;
+    public String shortestBeautifulSubstring(String s, int k) {
+        String res = null;
+        int minSize = Integer.MAX_VALUE;
 
-    for (int l = 0, r = 0; r < s.length(); ++r) {
-      if (s.charAt(r) == '1')
-        ++ones;
-      while (ones == k) {
-        if (r - l + 1 < minLength) {
-          bestLeft = l;
-          minLength = r - l + 1;
-        } else if (r - l + 1 == minLength &&
-                   s.substring(l, l + minLength)
-                           .compareTo(s.substring(bestLeft, bestLeft + minLength)) < 0) {
-          bestLeft = l;
+        for(int i = 0; i < s.length(); i++) {
+            int cnt = 0;
+            for(int j = i; j < s.length() && j - i < minSize; j++) {
+                if(s.charAt(j) == '1') cnt++;
+                if(cnt == k) {
+                    System.out.println(res);
+                    String sub = s.substring(i, j + 1);
+                    if(res == null || sub.length() < res.length() || (sub.length() == res.length() && res.compareTo(sub) > 0)) {
+                        res = sub;
+                        minSize = sub.length();
+                        break;
+                    } 
+                }
+            }
         }
-        if (s.charAt(l++) == '1')
-          --ones;
-      }
+
+        return res == null ? "" : res;
     }
-
-    return bestLeft == -1 ? "" : s.substring(bestLeft, bestLeft + minLength);
-  }
 }
-
-
-
