@@ -24,6 +24,7 @@
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0485-max-consecutive-ones](https://github.com/Dipratna29/LeetCode/tree/main/0485-max-consecutive-ones/) | Easy |
 | [1470-shuffle-the-array](https://github.com/Dipratna29/LeetCode/tree/main/1470-shuffle-the-array/) | Easy |
 | [1872-stone-game-viii](https://github.com/Dipratna29/LeetCode/tree/main/1872-stone-game-viii/) | Hard |
 | [1929-concatenation-of-array](https://github.com/Dipratna29/LeetCode/tree/main/1929-concatenation-of-array/) | Easy |
