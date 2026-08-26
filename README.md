@@ -25,6 +25,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1872-stone-game-viii](https://github.com/Dipratna29/LeetCode/tree/main/1872-stone-game-viii/) | Hard |
+| [1929-concatenation-of-array](https://github.com/Dipratna29/LeetCode/tree/main/1929-concatenation-of-array/) | Easy |
 | [3718-smallest-missing-multiple-of-k](https://github.com/Dipratna29/LeetCode/tree/main/3718-smallest-missing-multiple-of-k/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -50,4 +51,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/Dipratna29/LeetCode/tree/main/2904-shortest-and-lexicographically-smallest-beautiful-string/) | Medium |
+## Simulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1929-concatenation-of-array](https://github.com/Dipratna29/LeetCode/tree/main/1929-concatenation-of-array/) | Easy |
 <!---LeetCode Topics End-->
