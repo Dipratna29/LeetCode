@@ -12,10 +12,12 @@
 | ------- | ------- |
 | [1927-sum-game](https://github.com/Dipratna29/LeetCode/tree/main/1927-sum-game/) | Medium |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/Dipratna29/LeetCode/tree/main/2904-shortest-and-lexicographically-smallest-beautiful-string/) | Medium |
+| [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/Dipratna29/LeetCode/tree/main/3720-lexicographically-smallest-permutation-greater-than-target/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1927-sum-game](https://github.com/Dipratna29/LeetCode/tree/main/1927-sum-game/) | Medium |
+| [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/Dipratna29/LeetCode/tree/main/3720-lexicographically-smallest-permutation-greater-than-target/) | Medium |
 ## Game Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -49,6 +51,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3718-smallest-missing-multiple-of-k](https://github.com/Dipratna29/LeetCode/tree/main/3718-smallest-missing-multiple-of-k/) | Easy |
+| [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/Dipratna29/LeetCode/tree/main/3720-lexicographically-smallest-permutation-greater-than-target/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -57,4 +60,12 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1929-concatenation-of-array](https://github.com/Dipratna29/LeetCode/tree/main/1929-concatenation-of-array/) | Easy |
+## Counting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/Dipratna29/LeetCode/tree/main/3720-lexicographically-smallest-permutation-greater-than-target/) | Medium |
+## Enumeration
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/Dipratna29/LeetCode/tree/main/3720-lexicographically-smallest-permutation-greater-than-target/) | Medium |
 <!---LeetCode Topics End-->
