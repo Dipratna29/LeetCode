@@ -4,14 +4,14 @@ class Solution {
 
         int n = s.length();
 
-        // Count characters in s
+        // Count characters
         int[] count = new int[26];
 
         for (char ch : s.toCharArray()) {
             count[ch - 'a']++;
         }
 
-        // Check whether a palindrome is possible
+        // Check whether palindrome is possible
         int odd = 0;
         int middle = -1;
 
@@ -22,27 +22,26 @@ class Solution {
             }
         }
 
-        // Cannot form a palindrome
         if (odd > 1) {
             return "";
         }
 
+        // Number of characters in the first half
         int halfLen = n / 2;
 
-        // Characters available for the first half
-        int[] halfCount = new int[26];
+        // Count characters available in first half
+        int[] half = new int[26];
 
         for (int i = 0; i < 26; i++) {
-            halfCount[i] = count[i] / 2;
+            half[i] = count[i] / 2;
         }
 
         /*
-         * STEP 1:
-         * Try to make the first half exactly equal to
-         * target's first half.
+         * Try to make the first half equal to target's
+         * first half.
          */
-        int[] remaining = halfCount.clone();
-        char[] exactHalf = new char[halfLen];
+        int[] remaining = half.clone();
+        char[] firstHalf = new char[halfLen];
 
         boolean possible = true;
 
@@ -55,41 +54,37 @@ class Solution {
                 break;
             }
 
-            exactHalf[i] = target.charAt(i);
+            firstHalf[i] = target.charAt(i);
             remaining[c]--;
         }
 
         /*
-         * If exact half is possible, build its palindrome.
+         * If we can copy target's first half,
+         * build the palindrome and check it.
          */
         if (possible) {
 
-            String exactPalindrome =
-                    buildPalindrome(exactHalf, middle, n);
+            String candidate =
+                    build(firstHalf, middle, n);
 
-            // This is the smallest possible palindrome
-            // having this prefix.
-            if (exactPalindrome.compareTo(target) > 0) {
-                return exactPalindrome;
+            if (candidate.compareTo(target) > 0) {
+                return candidate;
             }
         }
 
         /*
-         * STEP 2:
-         * Exact half was not enough.
+         * Now we need to make the first half slightly bigger.
          *
-         * We need to make the first half greater than
-         * target's first half.
-         *
-         * Change the rightmost possible position.
+         * Start from the RIGHT because changing the rightmost
+         * possible position gives the smallest answer.
          */
         for (int pos = halfLen - 1; pos >= 0; pos--) {
 
-            remaining = halfCount.clone();
+            remaining = half.clone();
 
             boolean prefixPossible = true;
 
-            // Copy target's prefix [0 ... pos-1]
+            // Match target before pos
             for (int i = 0; i < pos; i++) {
 
                 int c = target.charAt(i) - 'a';
@@ -108,44 +103,40 @@ class Solution {
 
             int targetChar = target.charAt(pos) - 'a';
 
-            /*
-             * Choose the smallest character greater than
-             * target[pos].
-             */
+            // Try the smallest character greater than target[pos]
             for (int c = targetChar + 1; c < 26; c++) {
 
                 if (remaining[c] == 0) {
                     continue;
                 }
 
-                char[] half = new char[halfLen];
+                char[] newHalf = new char[halfLen];
 
                 // Copy prefix
                 for (int i = 0; i < pos; i++) {
-                    half[i] = target.charAt(i);
+                    newHalf[i] = target.charAt(i);
                 }
 
                 // Make this position greater
-                half[pos] = (char) ('a' + c);
+                newHalf[pos] = (char) ('a' + c);
 
                 remaining[c]--;
 
-                // Fill the remaining positions with
-                // the smallest possible characters.
+                // Fill rest with smallest characters
                 int index = pos + 1;
 
-                for (int ch = 0; ch < 26; ch++) {
-                    while (remaining[ch] > 0) {
-                        half[index++] = (char) ('a' + ch);
-                        remaining[ch]--;
+                for (int x = 0; x < 26; x++) {
+                    while (remaining[x] > 0) {
+                        newHalf[index++] = (char) ('a' + x);
+                        remaining[x]--;
                     }
                 }
 
-                String palindrome =
-                        buildPalindrome(half, middle, n);
+                String candidate =
+                        build(newHalf, middle, n);
 
-                if (palindrome.compareTo(target) > 0) {
-                    return palindrome;
+                if (candidate.compareTo(target) > 0) {
+                    return candidate;
                 }
             }
         }
@@ -153,28 +144,28 @@ class Solution {
         return "";
     }
 
-    private String buildPalindrome(
+    private String build(
             char[] half,
             int middle,
             int n) {
 
-        StringBuilder sb = new StringBuilder();
+        StringBuilder result = new StringBuilder();
 
         // First half
         for (char ch : half) {
-            sb.append(ch);
+            result.append(ch);
         }
 
-        // Middle character for odd length
+        // Middle character
         if (n % 2 == 1) {
-            sb.append((char) ('a' + middle));
+            result.append((char) ('a' + middle));
         }
 
-        // Reverse of first half
+        // Reverse first half
         for (int i = half.length - 1; i >= 0; i--) {
-            sb.append(half[i]);
+            result.append(half[i]);
         }
 
-        return sb.toString();
+        return result.toString();
     }
 }
