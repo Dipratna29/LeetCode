@@ -31,6 +31,7 @@
 | [1470-shuffle-the-array](https://github.com/Dipratna29/LeetCode/tree/main/1470-shuffle-the-array/) | Easy |
 | [1872-stone-game-viii](https://github.com/Dipratna29/LeetCode/tree/main/1872-stone-game-viii/) | Hard |
 | [1929-concatenation-of-array](https://github.com/Dipratna29/LeetCode/tree/main/1929-concatenation-of-array/) | Easy |
+| [2948-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/Dipratna29/LeetCode/tree/main/2948-make-lexicographically-smallest-array-by-swapping-elements/) | Medium |
 | [3718-smallest-missing-multiple-of-k](https://github.com/Dipratna29/LeetCode/tree/main/3718-smallest-missing-multiple-of-k/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -74,4 +75,12 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3734-lexicographically-smallest-palindromic-permutation-greater-than-target](https://github.com/Dipratna29/LeetCode/tree/main/3734-lexicographically-smallest-palindromic-permutation-greater-than-target/) | Hard |
+## Union-Find
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2948-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/Dipratna29/LeetCode/tree/main/2948-make-lexicographically-smallest-array-by-swapping-elements/) | Medium |
+## Sorting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2948-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/Dipratna29/LeetCode/tree/main/2948-make-lexicographically-smallest-array-by-swapping-elements/) | Medium |
 <!---LeetCode Topics End-->
